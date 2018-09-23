@@ -15,21 +15,34 @@ Auth::routes();
 /* CoreUI templates */
 
 Route::middleware('auth')->group(function() {
-	Route::view('/', 'panel.blank');
-	// Section CoreUI elements
-	Route::view('/sample/dashboard','samples.dashboard');
-	Route::view('/sample/buttons','samples.buttons');
-	Route::view('/sample/social','samples.social');
-	Route::view('/sample/cards','samples.cards');
-	Route::view('/sample/forms','samples.forms');
-	Route::view('/sample/modals','samples.modals');
-	Route::view('/sample/switches','samples.switches');
-	Route::view('/sample/tables','samples.tables');
-	Route::view('/sample/tabs','samples.tabs');
-	Route::view('/sample/icons-font-awesome', 'samples.font-awesome-icons');
-	Route::view('/sample/icons-simple-line', 'samples.simple-line-icons');
-	Route::view('/sample/widgets','samples.widgets');
-	Route::view('/sample/charts','samples.charts');
+	Route::get('/', 'HomeController@index')->name('admin.index');
+	Route::get('dashboard', 'HomeController@dashboard')->name('admin.dashboard');
+	// Area Master
+	Route::get('admin/area', 'AreaController@index')->name('admin.area.index');
+	Route::get('admin/area/list/{id}', 'AreaController@list')->name('admin.area.list');
+	Route::get('admin/area/add', 'AreaController@add')->name('admin.area.add');
+	Route::post('admin/area/addpost', 'AreaController@add_post')->name('admin.area.addpost');
+	Route::get('admin/area/edit/{id}', 'AreaController@edit')->name('admin.area.edit');
+	Route::post('admin/area/editpost', 'AreaController@edit_post')->name('admin.area.editpost');
+	// Worker Master
+	Route::get('admin/worker', 'WorkerController@index')->name('admin.worker.index');
+	Route::get('admin/worker/add', 'WorkerController@add')->name('admin.worker.add');
+	Route::post('admin/worker/addpost', 'WorkerController@add_post')->name('admin.worker.addpost');
+	Route::get('admin/worker/edit/{id}', 'WorkerController@edit')->name('admin.worker.edit');
+	Route::post('admin/worker/editpost', 'WorkerController@edit_post')->name('admin.worker.editpost');
+	//iForm category Master
+	Route::get('admin/category', 'CategoryController@index')->name('admin.category.index');
+	Route::get('admin/category/list/{id}', 'CategoryController@list')->name('admin.category.list');
+	Route::get('admin/category/add', 'CategoryController@add')->name('admin.category.add');
+	Route::post('admin/category/addpost', 'CategoryController@add_post')->name('admin.category.addpost');
+	Route::get('admin/category/edit/{id}', 'CategoryController@edit')->name('admin.category.edit');
+	Route::post('admin/category/editpost', 'CategoryController@edit_post')->name('admin.category.editpost');
+	//iFrom master
+	Route::get('admin/iform', 'IformController@index')->name('admin.iform.index');
+	Route::get('admin/iform/add', 'IformController@add')->name('admin.iform.add');
+	Route::post('admin/iform/addpost', 'IformController@add_post')->name('admin.iform.addpost');
+	Route::get('admin/iform/edit/{id}', 'IformController@edit')->name('admin.iform.edit');
+	Route::post('admin/iform/editpost', 'IformController@edit_post')->name('admin.iform.editpost');
 });
 // Section Pages
 Route::view('/sample/error404','errors.404')->name('error404');
