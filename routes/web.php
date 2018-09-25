@@ -43,6 +43,22 @@ Route::middleware('auth')->group(function() {
 	Route::post('admin/iform/addpost', 'IformController@add_post')->name('admin.iform.addpost');
 	Route::get('admin/iform/edit/{id}', 'IformController@edit')->name('admin.iform.edit');
 	Route::post('admin/iform/editpost', 'IformController@edit_post')->name('admin.iform.editpost');
+	//equip master
+	Route::get('admin/equip', 'EquipController@index')->name('admin.equip.index');
+	Route::get('admin/equip/add', 'EquipController@add')->name('admin.equip.add');
+	Route::post('admin/equip/addpost', 'EquipController@add_post')->name('admin.equip.addpost');
+	Route::get('admin/equip/edit/{id}', 'EquipController@edit')->name('admin.equip.edit');
+	Route::post('admin/equip/editpost', 'EquipController@edit_post')->name('admin.equip.editpost');
+	Route::get('admin/equip/csv', 'EquipController@csv')->name('admin.equip.csv');
+	Route::post('admin/equip/csvpost', 'EquipController@csvpost')->name('admin.equip.csvpost');
+	//work master
+	Route::get('admin/work', 'WorkController@index')->name('admin.work.index');
+	Route::get('admin/work/add', 'WorkController@add')->name('admin.work.add');
+	Route::post('admin/work/addpost', 'WorkController@add_post')->name('admin.work.addpost');
+	Route::get('admin/work/edit/{id}', 'WorkController@edit')->name('admin.work.edit');
+	Route::post('admin/work/editpost', 'WorkController@edit_post')->name('admin.work.editpost');
+	//ajax
+	Route::post('admin/iform/iforminfo', 'IformController@info')->name('admin.iform.info');
 });
 // Section Pages
 Route::view('/sample/error404','errors.404')->name('error404');

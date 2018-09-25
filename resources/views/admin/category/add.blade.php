@@ -25,7 +25,7 @@
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label" for="text-input">Category Name</label>
                                     <div class="col-md-9">
-                                        <input type="text" id="text-input" name="name" class="form-control" placeholder="Area name">
+                                        <input type="text" id="text-input" name="name" class="form-control" placeholder="Category name">
                                     </div>
                                 </div>
                         </div>

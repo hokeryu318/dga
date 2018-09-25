@@ -22,13 +22,13 @@
             <a class="nav-link" href="{{ route('admin.iform.index') }}"><i class="icon-puzzle"></i> iForms</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/sample/forms"><i class="icon-puzzle"></i> Equipments</a>
+            <a class="nav-link" href="{{ route('admin.equip.index') }}"><i class="icon-puzzle"></i> Equipments</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.worker.index') }}"><i class="icon-puzzle"></i> Workers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/sample/switches"><i class="icon-puzzle"></i> Works</a>
+            <a class="nav-link" href="{{ route('admin.work.index') }}"><i class="icon-puzzle"></i> Works</a>
           </li>
         </ul>
       </li>

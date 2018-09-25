@@ -30,7 +30,7 @@
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label" for="text-input">Category Name</label>
                                     <div class="col-md-9">
-                                        <input type="text" id="text-input" name="name" class="form-control" placeholder="Area name" value="{{ $obj->name }}">
+                                        <input type="text" id="text-input" name="name" class="form-control" placeholder="Category name" value="{{ $obj->name }}">
                                     </div>
                                 </div>
                         </div>

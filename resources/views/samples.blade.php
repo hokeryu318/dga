@@ -25,6 +25,7 @@
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   <!-- Styles required by this views -->
   <link rel="stylesheet" href="{{ asset('css/custom.css') }}">  
+  <link rel="stylesheet" href="{{ asset('css/datepicker3.css') }}">  
 </head>
 <!-- BODY options, add following classes to body to change options
 '.header-fixed' - Fixed Header

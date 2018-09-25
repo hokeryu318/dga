@@ -66,4 +66,10 @@ class IformController extends Controller
         Storage::disk('local')->put($iform->content, json_encode($result));
         return Redirect::to(route('admin.iform.index'));
     }
+
+    public function info(Request $request){
+        $iform = IForm::find($request->id);
+        $content = Storage::disk('local')->get($iform->content);
+        return $content;
+    }
 }
