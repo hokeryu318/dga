@@ -39,7 +39,7 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label" for="text-input">Work Date</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="text-input" name="date" class="form-control">
+                                    <input id="work_date" type="text" id="text-input" name="date" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -56,10 +56,19 @@
     </div>
 
 </div>
-
-@endsection
+<link rel="stylesheet" href="{{ asset('plugins/datepicker/datepicker3.css') }}"> 
+<script src="{{ asset('plugins/datepicker/bootstrap-datepicker.js')}}"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) { 
-        
+        var date = new Date();
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        $('#work_date').datepicker({
+            autoclose: true,
+            format: 'yyyy-mm-dd',
+            language: 'en',
+            todayHighlight: true
+        });
+        $('#work_date').datepicker('setDate', today);
     });  
 </script>
+@endsection

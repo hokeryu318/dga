@@ -24,7 +24,7 @@
                     <tr>
                       <td>{{ $worker->id }}</td>
                       <td>{{ $worker->name }}</td>
-                      <td>{{ $worker->area_id }}</td>
+                      <td>{{ $worker->area->name }}</td>
                       <td>
                         <span>
                           <a class="badge badge-success" href="{{ url('admin/worker/edit/'.$worker->id) }}">Edit</a>

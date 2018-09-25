@@ -18,6 +18,7 @@
                   <th>Worker</th>
                   <th>Equipment</th>
                   <th>Date</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -25,8 +26,8 @@
                     <tr>
                         <td>{{ $work->id }}</td>
                         <td>{{ $work->name }}</td>
-                        <td>{{ $work->worker_id }}</td>
-                        <td>{{ $work->equip_id }}</td>
+                        <td>{{ $work->worker->name }}</td>
+                        <td>{{ $work->equip->name }}</td>
                         <td>{{ $work->plan_at }}</td>
                         <td>
                             <span>
