@@ -15,8 +15,8 @@
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label" for="select">Area</label>
                                     <div class="col-md-9">
-                                    <select id="select" name="area" class="form-control">
-                                        <option value="0">None</option>
+                                    <select id="select" name="area" class="form-control" required>
+                                        <option value="">None</option>
                                         @foreach ($areas as $area)
                                             <option value="{{ $area->id }}"
                                                 @if($area->id == $obj->area_id)
@@ -30,7 +30,7 @@
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label" for="text-input">Worker Name</label>
                                     <div class="col-md-9">
-                                        <input type="text" id="text-input" name="name" class="form-control" placeholder="Area name" value="{{ $obj->name }}">
+                                        <input type="text" id="text-input" name="name" class="form-control" placeholder="Area name" value="{{ $obj->name }}" required>
                                     </div>
                                 </div>
                         </div>

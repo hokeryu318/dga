@@ -14,14 +14,14 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label" for="text-input">iForm Name</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="text-input" name="name" class="form-control" placeholder="iForm name" value="{{ $iform->name }}">
+                                    <input type="text" id="text-input" name="name" class="form-control" placeholder="iForm name" value="{{ $iform->name }}" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label" for="select">iForm Category</label>
                                 <div class="col-md-9">
-                                <select id="select" name="category" class="form-control">
-                                    <option value="0">None</option>
+                                <select id="select" name="category" class="form-control" required>
+                                    <option value="">None</option>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}"
                                             @if($category->id == $iform->category_id)
@@ -59,6 +59,12 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="text-input">QRCode</label>
+                                <div class="col-md-9">
+                                    <img src="{{ asset('iform_'.$iform->id.'.png') }}" alt="">
+                                </div>
+                            </div>
                         </div>
                         <div class="card-footer">
                             <button type="button" onclick="addTr();" class="btn btn-sm btn-info"><i class="fa fa-ban"></i> Add Field</button>
@@ -96,6 +102,7 @@
         obj.attr('name', 'row_' + index);
         $('.clonetext', obj).attr('name', 'label[]');
         $('.cloneselect', obj).attr('name', 'select[]');
+        $('.clonetext', obj).attr('required', 'required');
 
         $('#tbody').append(obj);
 

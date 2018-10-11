@@ -13,7 +13,9 @@
 
 Auth::routes();
 /* CoreUI templates */
-
+Route::post('login', 'Auth\LoginController@login')->name('login');
+Route::get('login' , 'Auth\LoginController@showLoginForm')->name('login');
+Route::get('/'     , 'Auth\LoginController@showLoginForm');
 Route::middleware('auth')->group(function() {
 	Route::get('/', 'HomeController@index')->name('admin.index');
 	Route::get('dashboard', 'HomeController@dashboard')->name('admin.dashboard');

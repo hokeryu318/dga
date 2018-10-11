@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
+use LaravelQRCode\Facades\QRCode;
 use App\Models\IForm;
 use App\Models\Category;
 
 class IformController extends Controller
 {
     public function index(){
-        $iforms = IForm::all();
+        $iforms = IForm::paginate(10);
         return view('admin.iform.index')->with('iforms', $iforms);
     }
 
@@ -35,7 +36,9 @@ class IformController extends Controller
         $id = $iform->id;
         $iform->content = 'iform_'.$id.'.json';
         $iform->save();
+        
         Storage::disk('local')->put($iform->content, json_encode($result));
+        $qrcode = QRCode::text(json_encode($result))->setOutfile('iform_'.$id.'.png')->png();
         return Redirect::to(route('admin.iform.index'));
     }
 
@@ -63,7 +66,9 @@ class IformController extends Controller
         $id = $iform->id;
         $iform->content = 'iform_'.$id.'.json';
         $iform->save();
+        
         Storage::disk('local')->put($iform->content, json_encode($result));
+        $qrcode = QRCode::text(json_encode($result))->setOutfile('iform_'.$id.'.png')->png();
         return Redirect::to(route('admin.iform.index'));
     }
 

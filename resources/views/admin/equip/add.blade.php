@@ -13,7 +13,7 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label" for="text-input">Eqipment Name</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="text-input" name="name" class="form-control" placeholder="Eqipment name">
+                                    <input type="text" id="text-input" name="name" class="form-control" placeholder="Eqipment name" required>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -76,6 +76,7 @@
         obj.attr('name', 'row_' + index);
         $('.clonelabel', obj).attr('name', 'label[]');
         $('.clonevalue', obj).attr('name', 'value[]');
+        $('.clonevalue', obj).attr('required', 'required');
 
         $('#tbody').append(obj);
 

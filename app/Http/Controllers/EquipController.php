@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
+use LaravelQRCode\Facades\QRCode;
 use App\Models\Equip;
 use App\Models\IForm;
 
@@ -37,6 +38,7 @@ class EquipController extends Controller
         $equip->content = 'equip_'.$id.'.json';
         $equip->save();
         Storage::disk('local')->put($equip->content, json_encode($result));
+        $qrcode = QRCode::text(json_encode($result))->setOutfile('equip_'.$id.'.png')->png();
         return Redirect::to(route('admin.equip.index'));
     }
 
@@ -61,6 +63,7 @@ class EquipController extends Controller
         $equip->save();
         $equip->content = 'equip_'.$equip->id.'.json';
         Storage::disk('local')->put($equip->content, json_encode($result));
+        $qrcode = QRCode::text(json_encode($result))->setOutfile('equip_'.$id.'.png')->png();
         return Redirect::to(route('admin.equip.index'));
     }
 
