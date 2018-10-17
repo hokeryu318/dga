@@ -8,4 +8,7 @@ class IForm extends Model
 {
     //
     protected $table = 'iforms';
+    public function category(){
+        return $this->belongsTo(Category::class);
+    }
 }

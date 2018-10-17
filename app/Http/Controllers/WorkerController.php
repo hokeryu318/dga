@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\Worker;
 use App\Models\Area;
@@ -22,14 +23,12 @@ class WorkerController extends Controller
     }
 
     public function add_post(Request $request){
-        // $area = new Area();
-        // $area->name = $request->areaname;
-        // $area->parent_id = $request->parent;
-        // $area->save();
-        // return Redirect::to(route('admin.area.index'));
         $worker = new Worker();
         $worker->name = $request->name;
         $worker->area_id = $request->area;
+        $worker->email = $request->email;
+        $worker->password = bcrypt($request->password);
+        // dd($worker);
         $worker->save();
         return Redirect::to(route('admin.worker.index'));
     }
