@@ -1,1057 +1,725 @@
 @extends('samples')
 @section('content')
-      <div class="container-fluid">
-        <div class="animated fadeIn">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-header">
-                  <strong>Credit Card</strong>
-                  <small>Form</small>
-                </div>
-                <div class="card-body">
-                  <div class="row">
 
-                    <div class="col-sm-12">
+<div class="container-fluid">
 
-                      <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                      </div>
-
-                    </div>
-
-                  </div>
-                  <!--/.row-->
-
-                  <div class="row">
-
-                    <div class="col-sm-12">
-
-                      <div class="form-group">
-                        <label for="ccnumber">Credit Card Number</label>
-                        <input type="text" class="form-control" id="ccnumber" placeholder="0000 0000 0000 0000">
-                      </div>
-
-                    </div>
-
-                  </div>
-                  <!--/.row-->
-
-                  <div class="row">
-
-                    <div class="form-group col-sm-4">
-                      <label for="ccmonth">Month</label>
-                      <select class="form-control" id="ccmonth">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                      </select>
-                    </div>
-
-                    <div class="form-group col-sm-4">
-                      <label for="ccyear">Year</label>
-                      <select class="form-control" id="ccyear">
-                        <option>2014</option>
-                        <option>2015</option>
-                        <option>2016</option>
-                        <option>2017</option>
-                        <option>2018</option>
-                        <option>2019</option>
-                        <option>2020</option>
-                        <option>2021</option>
-                        <option>2022</option>
-                        <option>2023</option>
-                        <option>2024</option>
-                        <option>2025</option>
-                      </select>
-                    </div>
-
-                    <div class="col-sm-4">
-
-                      <div class="form-group">
-                        <label for="cvv">CVV/CVC</label>
-                        <input type="text" class="form-control" id="cvv" placeholder="123">
-                      </div>
-
-                    </div>
-
-                  </div>
-                  <!--/.row-->
-                </div>
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-sm-6 col-lg-3">
+        <div class="card text-white bg-primary">
+          <div class="card-body pb-0">
+            <div class="btn-group float-right">
+              <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="icon-settings"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
               </div>
-
             </div>
-            <!--/.col-->
-
-            <div class="col-sm-6">
-
-              <div class="card">
-                <div class="card-header">
-                  <strong>Company</strong>
-                  <small>Form</small>
-                </div>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="company">Company</label>
-                    <input type="text" class="form-control" id="company" placeholder="Enter your company name">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="vat">VAT</label>
-                    <input type="text" class="form-control" id="vat" placeholder="PL1234567890">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="street">Street</label>
-                    <input type="text" class="form-control" id="street" placeholder="Enter street name">
-                  </div>
-
-                  <div class="row">
-
-                    <div class="form-group col-sm-8">
-                      <label for="city">City</label>
-                      <input type="text" class="form-control" id="city" placeholder="Enter your city">
-                    </div>
-
-                    <div class="form-group col-sm-4">
-                      <label for="postal-code">Postal Code</label>
-                      <input type="text" class="form-control" id="postal-code" placeholder="Postal Code">
-                    </div>
-
-                  </div>
-                  <!--/.row-->
-
-                  <div class="form-group">
-                    <label for="country">Country</label>
-                    <input type="text" class="form-control" id="country" placeholder="Country name">
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <!--/.col-->
-
+            <h4 class="mb-0"> {{$equipct}} </h4>
+            <p>Equips running</p>
           </div>
-          <!--/.row-->
-
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-header">
-                  <strong>Basic Form</strong>
-                  Elements
-                </div>
-                <div class="card-body">
-                  <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label">Static</label>
-                      <div class="col-md-9">
-                        <p class="form-control-static">Username</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="text-input">Text Input</label>
-                      <div class="col-md-9">
-                        <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Text">
-                        <span class="help-block">This is a help text</span>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="email-input">Email Input</label>
-                      <div class="col-md-9">
-                        <input type="email" id="email-input" name="email-input" class="form-control" placeholder="Enter Email">
-                        <span class="help-block">Please enter your email</span>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="password-input">Password</label>
-                      <div class="col-md-9">
-                        <input type="password" id="password-input" name="password-input" class="form-control" placeholder="Password">
-                        <span class="help-block">Please enter a complex password</span>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="disabled-input">Disabled Input</label>
-                      <div class="col-md-9">
-                        <input type="text" id="disabled-input" name="disabled-input" class="form-control" placeholder="Disabled" disabled="">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="textarea-input">Textarea</label>
-                      <div class="col-md-9">
-                        <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="Content.."></textarea>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="select">Select</label>
-                      <div class="col-md-9">
-                        <select id="select" name="select" class="form-control">
-                          <option value="0">Please select</option>
-                          <option value="1">Option #1</option>
-                          <option value="2">Option #2</option>
-                          <option value="3">Option #3</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="select">Select Large</label>
-                      <div class="col-md-9">
-                        <select id="select" name="select" class="form-control form-control-lg">
-                          <option value="0">Please select</option>
-                          <option value="1">Option #1</option>
-                          <option value="2">Option #2</option>
-                          <option value="3">Option #3</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="select">Select Small</label>
-                      <div class="col-md-9">
-                        <select id="select" name="select" class="form-control form-control-sm">
-                          <option value="0">Please select</option>
-                          <option value="1">Option #1</option>
-                          <option value="2">Option #2</option>
-                          <option value="3">Option #3</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="select">Disabled Select</label>
-                      <div class="col-md-9">
-                        <select id="disabledSelect" class="form-control" disabled="">
-                          <option value="0">Please select</option>
-                          <option value="1">Option #1</option>
-                          <option value="2">Option #2</option>
-                          <option value="3">Option #3</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="multiple-select">Multiple select</label>
-                      <div class="col-md-9">
-                        <select id="multiple-select" name="multiple-select" class="form-control" size="5" multiple="">
-                          <option value="1">Option #1</option>
-                          <option value="2">Option #2</option>
-                          <option value="3">Option #3</option>
-                          <option value="4">Option #4</option>
-                          <option value="5">Option #5</option>
-                          <option value="6">Option #6</option>
-                          <option value="7">Option #7</option>
-                          <option value="8">Option #8</option>
-                          <option value="9">Option #9</option>
-                          <option value="10">Option #10</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label">Radios</label>
-                      <div class="col-md-9">
-                        <div class="radio">
-                          <label for="radio1">
-                            <input type="radio" id="radio1" name="radios" value="option1"> Option 1
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label for="radio2">
-                            <input type="radio" id="radio2" name="radios" value="option2"> Option 2
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label for="radio3">
-                            <input type="radio" id="radio3" name="radios" value="option3"> Option 3
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label">Inline Radios</label>
-                      <div class="col-md-9">
-                        <label class="radio-inline" for="inline-radio1">
-                          <input type="radio" id="inline-radio1" name="inline-radios" value="option1"> One
-                        </label>
-                        <label class="radio-inline" for="inline-radio2">
-                          <input type="radio" id="inline-radio2" name="inline-radios" value="option2"> Two
-                        </label>
-                        <label class="radio-inline" for="inline-radio3">
-                          <input type="radio" id="inline-radio3" name="inline-radios" value="option3"> Three
-                        </label>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label">Checkboxes</label>
-                      <div class="col-md-9">
-                        <div class="checkbox">
-                          <label for="checkbox1">
-                            <input type="checkbox" id="checkbox1" name="checkbox1" value="option1"> Option 1
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label for="checkbox2">
-                            <input type="checkbox" id="checkbox2" name="checkbox2" value="option2"> Option 2
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label for="checkbox3">
-                            <input type="checkbox" id="checkbox3" name="checkbox3" value="option3"> Option 3
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label">Inline Checkboxes</label>
-                      <div class="col-md-9">
-                        <label class="checkbox-inline" for="inline-checkbox1">
-                          <input type="checkbox" id="inline-checkbox1" name="inline-checkbox1" value="option1">One
-                        </label>
-                        <label class="checkbox-inline" for="inline-checkbox2">
-                          <input type="checkbox" id="inline-checkbox2" name="inline-checkbox2" value="option2">Two
-                        </label>
-                        <label class="checkbox-inline" for="inline-checkbox3">
-                          <input type="checkbox" id="inline-checkbox3" name="inline-checkbox3" value="option3">Three
-                        </label>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="file-input">File input</label>
-                      <div class="col-md-9">
-                        <input type="file" id="file-input" name="file-input">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="file-multiple-input">Multiple File input</label>
-                      <div class="col-md-9">
-                        <input type="file" id="file-multiple-input" name="file-multiple-input" multiple="">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                  <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-header">
-                  <strong>Inline</strong>
-                  Form
-                </div>
-                <div class="card-body">
-                  <form action="" method="post" class="form-inline">
-                    <div class="form-group">
-                      <label for="exampleInputName2">Name</label>
-                      <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail2">Email</label>
-                      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                  <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-header">
-                  <strong>Horizontal</strong>
-                  Form
-                </div>
-                <div class="card-body">
-                  <form action="" method="post" class="form-horizontal">
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="hf-email">Email</label>
-                      <div class="col-md-9">
-                        <input type="email" id="hf-email" name="hf-email" class="form-control" placeholder="Enter Email..">
-                        <span class="help-block">Please enter your email</span>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="hf-password">Password</label>
-                      <div class="col-md-9">
-                        <input type="password" id="hf-password" name="hf-password" class="form-control" placeholder="Enter Password..">
-                        <span class="help-block">Please enter your password</span>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                  <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <strong>Normal</strong>
-                  Form
-                </div>
-                <div class="card-body">
-                  <form action="" method="post">
-                    <div class="form-group">
-                      <label for="nf-email">Email</label>
-                      <input type="email" id="nf-email" name="nf-email" class="form-control" placeholder="Enter Email..">
-                      <span class="help-block">Please enter your email</span>
-                    </div>
-                    <div class="form-group">
-                      <label for="nf-password">Password</label>
-                      <input type="password" id="nf-password" name="nf-password" class="form-control" placeholder="Enter Password..">
-                      <span class="help-block">Please enter your password</span>
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                  <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-header">
-                  Input
-                  <strong>Grid</strong>
-                </div>
-                <div class="card-body">
-                  <form action="" method="post" class="form-horizontal">
-
-                    <div class="form-group row">
-                      <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder=".col-sm-3">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" placeholder=".col-sm-4">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-5">
-                        <input type="text" class="form-control" placeholder=".col-sm-5">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-6">
-                        <input type="text" class="form-control" placeholder=".col-sm-6">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder=".col-sm-7">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-8">
-                        <input type="text" class="form-control" placeholder=".col-sm-8">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" placeholder=".col-sm-9">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder=".col-sm-10">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-11">
-                        <input type="text" class="form-control" placeholder=".col-sm-11">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-12">
-                        <input type="text" class="form-control" placeholder=".col-sm-12">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-user"></i> Login</button>
-                  <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-header">
-                  Input
-                  <strong>Sizes</strong>
-                </div>
-                <div class="card-body">
-                  <form action="" method="post" class="form-horizontal">
-                    <div class="form-group row">
-                      <label class="col-sm-5 col-form-label" for="input-small">Small Input</label>
-                      <div class="col-sm-6">
-                        <input type="text" id="input-small" name="input-small" class="form-control form-control-sm" placeholder=".form-control-sm">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-5 col-form-label" for="input-normal">Normal Input</label>
-                      <div class="col-sm-6">
-                        <input type="text" id="input-normal" name="input-normal" class="form-control" placeholder="Normal">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-5 col-form-label" for="input-large">Large Input</label>
-                      <div class="col-sm-6">
-                        <input type="text" id="input-large" name="input-large" class="form-control form-control-lg" placeholder=".form-control-lg">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                  <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-                </div>
-              </div>
-            </div>
-            <!--/.col-->
+          <div class="chart-wrapper px-3" style="height:70px;">
+            <canvas id="card-chart1" class="chart" height="70"></canvas>
           </div>
-          <!--/.row-->
-
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-header">
-                  <strong>Validation states</strong>
-                  Form
-                </div>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label class="form-col-form-label" for="inputSuccess1">Input with success</label>
-                    <input type="text" class="form-control is-valid" id="inputSuccess1">
-                  </div>
-                  <div class="form-group">
-                    <label class="form-col-form-label" for="inputError1">Input with error</label>
-                    <input type="text" class="form-control is-invalid" id="inputError1">
-                    <div class="invalid-feedback">
-                      Please provide a valid informations.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--/.col-->
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-header">
-                  <strong>Validation states </strong>
-                  with optional icons
-                </div>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label class="form-col-form-label" for="inputSuccess2">Input with success</label>
-                    <input type="text" class="form-control is-valid" id="inputSuccess2">
-                  </div>
-                  <div class="form-group">
-                    <label class="form-col-form-label" for="inputError2">Input with error</label>
-                    <input type="text" class="form-control is-invalid" id="inputError2">
-                    <div class="invalid-feedback">
-                      Please provide a valid informations.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--/.col-->
-          </div>
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-header">
-                  <strong>Icon/Text</strong>
-                  Groups
-                </div>
-                <div class="card-body">
-                  <form action="" method="post" class="form-horizontal">
-                    <div class="form-group row">
-                      <div class="col-md-12">
-                        <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                          <input type="text" id="input1-group1" name="input1-group1" class="form-control" placeholder="Username">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-md-12">
-                        <div class="input-group">
-                          <input type="email" id="input2-group1" name="input2-group1" class="form-control" placeholder="Email">
-                          <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-md-12">
-                        <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-euro"></i></span>
-                          <input type="text" id="input3-group1" name="input3-group1" class="form-control" placeholder="..">
-                          <span class="input-group-addon">.00</span>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                  <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-header">
-                  <strong>Buttons</strong>
-                  Groups
-                </div>
-                <div class="card-body">
-                  <form action="" method="post" class="form-horizontal">
-                    <div class="form-group row">
-                      <div class="col-md-12">
-                        <div class="input-group">
-                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
-                          </span>
-                          <input type="text" id="input1-group2" name="input1-group2" class="form-control" placeholder="Username">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-md-12">
-                        <div class="input-group">
-                          <input type="email" id="input2-group2" name="input2-group2" class="form-control" placeholder="Email">
-                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-primary">Submit</button>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-md-12">
-                        <div class="input-group">
-                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-primary"><i class="fa fa-facebook"></i></button>
-                          </span>
-                          <input type="text" id="input3-group2" name="input3-group2" class="form-control" placeholder="Search">
-                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-primary"><i class="fa fa-twitter"></i></button>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                  <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-header">
-                  <strong>Dropdowns</strong>
-                  Groups
-                </div>
-                <div class="card-body">
-                  <form action="" method="post" class="form-horizontal">
-                    <div class="form-group row">
-                      <div class="col-md-12">
-                        <div class="input-group">
-                          <div class="input-group-btn">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action
-                              <span class="caret"></span>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                              <div role="separator" class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                          </div>
-                          <input type="text" id="input1-group3" name="input1-group3" class="form-control" placeholder="Username">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-md-12">
-                        <div class="input-group">
-                          <input type="email" id="input2-group3" name="input2-group3" class="form-control" placeholder="Email">
-                          <div class="input-group-btn">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action
-                              <span class="caret"></span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                              <div role="separator" class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="input-group">
-                          <div class="input-group-btn">
-                            <button type="button" class="btn btn-primary">Action</button>
-                            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
-                              <span class="caret"></span>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                              <div role="separator" class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                          </div>
-                          <input type="text" id="input3-group3" name="input3-group3" class="form-control" placeholder="..">
-                          <div class="input-group-btn">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                              <span class="caret"></span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                              <div role="separator" class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                  <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-header">
-                  Use the grid for big devices!
-                  <small>
-                    <code>.col-lg-*</code>
-                    <code>.col-md-*</code>
-                    <code>.col-sm-*</code>
-                  </small>
-                </div>
-                <div class="card-body">
-                  <form action="" method="post" class="form-horizontal">
-                    <div class="form-group row">
-                      <div class="col-md-8">
-                        <input type="text" class="form-control" placeholder=".col-md-8">
-                      </div>
-                      <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder=".col-md-4">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-md-7">
-                        <input type="text" class="form-control" placeholder=".col-md-7">
-                      </div>
-                      <div class="col-md-5">
-                        <input type="text" class="form-control" placeholder=".col-md-5">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder=".col-md-6">
-                      </div>
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder=".col-md-6">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-md-5">
-                        <input type="text" class="form-control" placeholder=".col-md-5">
-                      </div>
-                      <div class="col-md-7">
-                        <input type="text" class="form-control" placeholder=".col-md-7">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder=".col-md-4">
-                      </div>
-                      <div class="col-md-8">
-                        <input type="text" class="form-control" placeholder=".col-md-8">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-sm btn-primary">Action</button>
-                  <button type="button" class="btn btn-sm btn-danger">Action</button>
-                  <button type="button" class="btn btn-sm btn-warning">Action</button>
-                  <button type="button" class="btn btn-sm btn-info">Action</button>
-                  <button type="button" class="btn btn-sm btn-success">Action</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-header">
-                  Input Grid for small devices!
-                  <small>
-                    <code>.col-*</code>
-                  </small>
-                </div>
-                <div class="card-body">
-                  <form action="" method="post" class="form-horizontal">
-                    <div class="form-group row">
-                      <div class="col-4">
-                        <input type="text" class="form-control" placeholder=".col-4">
-                      </div>
-                      <div class="col-8">
-                        <input type="text" class="form-control" placeholder=".col-8">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-5">
-                        <input type="text" class="form-control" placeholder=".col-5">
-                      </div>
-                      <div class="col-7">
-                        <input type="text" class="form-control" placeholder=".col-7">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-6">
-                        <input type="text" class="form-control" placeholder=".col-6">
-                      </div>
-                      <div class="col-6">
-                        <input type="text" class="form-control" placeholder=".col-6">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-7">
-                        <input type="text" class="form-control" placeholder=".col-5">
-                      </div>
-                      <div class="col-5">
-                        <input type="text" class="form-control" placeholder=".col-5">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-8">
-                        <input type="text" class="form-control" placeholder=".col-8">
-                      </div>
-                      <div class="col-4">
-                        <input type="text" class="form-control" placeholder=".col-4">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-sm btn-primary">Action</button>
-                  <button type="button" class="btn btn-sm btn-danger">Action</button>
-                  <button type="button" class="btn btn-sm btn-warning">Action</button>
-                  <button type="button" class="btn btn-sm btn-info">Action</button>
-                  <button type="button" class="btn btn-sm btn-success">Action</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-header">
-                  Example Form
-                </div>
-                <div class="card-body">
-                  <form action="" method="post">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <span class="input-group-addon">Username</span>
-                        <input type="text" id="username3" name="username3" class="form-control">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <span class="input-group-addon">Email</span>
-                        <input type="email" id="email3" name="email3" class="form-control">
-                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <span class="input-group-addon">Password</span>
-                        <input type="password" id="password3" name="password3" class="form-control">
-                        <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
-                      </div>
-                    </div>
-                    <div class="form-group form-actions">
-                      <button type="submit" class="btn btn-sm btn-primary">Submit</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-header">
-                  Example Form
-                </div>
-                <div class="card-body">
-                  <form action="" method="post">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input type="text" id="username2" name="username2" class="form-control" placeholder="Username">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input type="email" id="email2" name="email2" class="form-control" placeholder="Email">
-                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input type="password" id="password2" name="password2" class="form-control" placeholder="Password">
-                        <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
-                      </div>
-                    </div>
-                    <div class="form-group form-actions">
-                      <button type="submit" class="btn btn-sm btn-secondary">Submit</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-header">
-                  Example Form
-                </div>
-                <div class="card-body">
-                  <form action="" method="post">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type="text" id="username" name="username" class="form-control" placeholder="Username">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Email">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Password">
-                      </div>
-                    </div>
-                    <div class="form-group form-actions">
-                      <button type="submit" class="btn btn-sm btn-success">Submit</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--/.row-->
-
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="card">
-                <div class="card-header">
-                  <i class="fa fa-edit"></i>Form Elements
-                  <div class="card-actions">
-                    <a href="#" class="btn-setting"><i class="icon-settings"></i></a>
-                    <a href="#" class="btn-minimize"><i class="icon-arrow-up"></i></a>
-                    <a href="#" class="btn-close"><i class="icon-close"></i></a>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <form class="form-horizontal">
-                    <div class="form-group">
-                      <label class="col-form-label" for="prependedInput">Prepended text</label>
-                      <div class="controls">
-                        <div class="input-prepend input-group">
-                          <span class="input-group-addon">@</span>
-                          <input id="prependedInput" class="form-control" size="16" type="text">
-                        </div>
-                        <p class="help-block">Here's some help text</p>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-form-label" for="appendedInput">Appended text</label>
-                      <div class="controls">
-                        <div class="input-group">
-                          <input id="appendedInput" class="form-control" size="16" type="text">
-                          <span class="input-group-addon">.00</span>
-                        </div>
-                        <span class="help-block">Here's more help text</span>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-form-label" for="appendedPrependedInput">Append and prepend</label>
-                      <div class="controls">
-                        <div class="input-prepend input-group">
-                          <span class="input-group-addon">$</span>
-                          <input id="appendedPrependedInput" class="form-control" size="16" type="text">
-                          <span class="input-group-addon">.00</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-form-label" for="appendedInputButton">Append with button</label>
-                      <div class="controls">
-                        <div class="input-group">
-                          <input id="appendedInputButton" class="form-control" size="16" type="text">
-                          <span class="input-group-btn">
-                            <button class="btn btn-secondary" type="button">Go!</button>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-form-label" for="appendedInputButtons">Two-button append</label>
-                      <div class="controls">
-                        <div class="input-group">
-                          <input id="appendedInputButtons" size="16" class="form-control" type="text">
-                          <span class="input-group-btn">
-                            <button class="btn btn-secondary" type="button">Search</button>
-                            <button class="btn btn-secondary" type="button">Options</button>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-actions">
-                      <button type="submit" class="btn btn-primary">Save changes</button>
-                      <button type="button" class="btn btn-secondary">Cancel</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <!--/.col-->
-          </div>
-          <!--/.row-->
         </div>
-
       </div>
+      <!--/.col-->
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="card text-white bg-info">
+          <div class="card-body pb-0">
+            <button type="button" class="btn btn-transparent p-0 float-right">
+              <i class="icon-location-pin"></i>
+            </button>
+            <h4 class="mb-0"> {{$workerct}} </h4>
+            <p>Workers online</p>
+          </div>
+          <div class="chart-wrapper px-3" style="height:70px;">
+            <canvas id="card-chart2" class="chart" height="70"></canvas>
+          </div>
+        </div>
+      </div>
+      <!--/.col-->
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="card text-white bg-warning">
+          <div class="card-body pb-0">
+            <div class="btn-group float-right">
+              <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="icon-settings"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          <h4 class="mb-0">{{ $workmcount }}</h4>
+            <p>Finished Works</p>
+          </div>
+          <div class="chart-wrapper" style="height:70px;">
+            <canvas id="card-chart3" class="chart" height="70"></canvas>
+          </div>
+        </div>
+      </div>
+      <!--/.col-->
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="card text-white bg-danger">
+          <div class="card-body pb-0">
+            <div class="btn-group float-right">
+              <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="icon-settings"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <h4 class="mb-0"> {{$workfcount}} </h4>
+            <p>Upcoming Works</p>
+          </div>
+          <div class="chart-wrapper px-3" style="height:70px;">
+            <canvas id="card-chart4" class="chart" height="70"></canvas>
+          </div>
+        </div>
+      </div>
+      <!--/.col-->
+    </div>
+    <!--/.row-->
+
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-5">
+            <h4 class="card-title mb-0">Work diagram</h4>
+            <div class="small text-muted">November 2018</div>
+          </div>
+          <!--/.col-->
+          <div class="col-sm-7 d-none d-md-block">
+            <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button>
+            <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+              <div class="btn-group mr-3" data-toggle="buttons" aria-label="First group">
+                <label class="btn btn-outline-secondary">
+                  <input type="radio" name="options" id="option1"> Day
+                </label>
+                <label class="btn btn-outline-secondary active">
+                  <input type="radio" name="options" id="option2" checked=""> Month
+                </label>
+                <label class="btn btn-outline-secondary">
+                  <input type="radio" name="options" id="option3"> Year
+                </label>
+              </div>
+            </div>
+          </div>
+          <!--/.col-->
+        </div>
+        <!--/.row-->
+        <div class="chart-wrapper" style="height:300px;margin-top:40px;">
+          <canvas id="main-chart" class="chart" height="300"></canvas>
+        </div>
+      </div>
+      <div class="card-footer">
+        <ul>
+          <li>
+            <div class="text-muted">Working</div>
+            <strong>29.703 Users (40%)</strong>
+            <div class="progress progress-xs mt-2">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </li>
+          <li class="d-none d-md-table-cell">
+            <div class="text-muted">Work count</div>
+            <strong>24.093 Users (20%)</strong>
+            <div class="progress progress-xs mt-2">
+              <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </li>
+          
+      </div>
+    </div>
+    <!--/.card-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            Equips &amp; Works
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12 col-lg-4">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="callout callout-info">
+                      <small class="text-muted">Testing Client</small>
+                      <br>
+                      <strong class="h4">9,123</strong>
+                      <div class="chart-wrapper">
+                        <canvas id="sparkline-chart-1" width="100" height="30"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.col-->
+                  <div class="col-sm-6">
+                    <div class="callout callout-danger">
+                      <small class="text-muted">New Clients</small>
+                      <br>
+                      <strong class="h4">22,643</strong>
+                      <div class="chart-wrapper">
+                        <canvas id="sparkline-chart-2" width="100" height="30"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.col-->
+                </div>
+                <!--/.row-->
+                <hr class="mt-0">
+                <ul class="horizontal-bars">
+                  <li>
+                    <div class="title">
+                      Monday
+                    </div>
+                    <div class="bars">
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 34%" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="title">
+                      Tuesday
+                    </div>
+                    <div class="bars">
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 56%" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 94%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="title">
+                      Wednesday
+                    </div>
+                    <div class="bars">
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 67%" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="title">
+                      Thursday
+                    </div>
+                    <div class="bars">
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 43%" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 91%" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="title">
+                      Friday
+                    </div>
+                    <div class="bars">
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 22%" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 73%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="title">
+                      Saturday
+                    </div>
+                    <div class="bars">
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="title">
+                      Sunday
+                    </div>
+                    <div class="bars">
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 9%" aria-valuenow="9" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 69%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="legend">
+                    <span class="badge badge-pill badge-info"></span>
+                    <small>New clients</small> &nbsp;
+                    <span class="badge badge-pill badge-danger"></span>
+                    <small>Recurring clients</small>
+                  </li>
+                </ul>
+              </div>
+              <!--/.col-->
+              <div class="col-sm-6 col-lg-4">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="callout callout-warning">
+                      <small class="text-muted">Pageviews</small>
+                      <br>
+                      <strong class="h4">78,623</strong>
+                      <div class="chart-wrapper">
+                        <canvas id="sparkline-chart-3" width="100" height="30"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.col-->
+                  <div class="col-sm-6">
+                    <div class="callout callout-success">
+                      <small class="text-muted">Organic</small>
+                      <br>
+                      <strong class="h4">49,123</strong>
+                      <div class="chart-wrapper">
+                        <canvas id="sparkline-chart-4" width="100" height="30"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.col-->
+                </div>
+                <!--/.row-->
+                <hr class="mt-0">
+                <ul class="horizontal-bars type-2">
+                  <li>
+                    <i class="icon-user"></i>
+                    <span class="title">Male</span>
+                    <span class="value">43%</span>
+                    <div class="bars">
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 43%" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="icon-user-female"></i>
+                    <span class="title">Female</span>
+                    <span class="value">37%</span>
+                    <div class="bars">
+                      <div class="progress progress-xs">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 37%" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="divider"></li>
+
+                  <li class="divider text-center">
+                    <button type="button" class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="show more"><i class="icon-options"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <!--/.col-->
+              <div class="col-sm-6 col-lg-4">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="callout">
+                      <small class="text-muted">CTR</small>
+                      <br>
+                      <strong class="h4">23%</strong>
+                      <div class="chart-wrapper">
+                        <canvas id="sparkline-chart-5" width="100" height="30"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.col-->
+                  <div class="col-sm-6">
+                    <div class="callout callout-primary">
+                      <small class="text-muted">Bounce Rate</small>
+                      <br>
+                      <strong class="h4">5%</strong>
+                      <div class="chart-wrapper">
+                        <canvas id="sparkline-chart-6" width="100" height="30"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.col-->
+                </div>
+                <!--/.row-->
+                <hr class="mt-0">
+                <ul class="icons-list">
+                  <li>
+                    <i class="icon-screen-desktop bg-primary"></i>
+                    <div class="desc">
+                      <div class="title">iMac 4k</div>
+                      <small>Lorem ipsum dolor sit amet</small>
+                    </div>
+                    <div class="value">
+                      <div class="small text-muted">Sold this week</div>
+                      <strong>1.924</strong>
+                    </div>
+                    <div class="actions">
+                      <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="icon-screen-smartphone bg-info"></i>
+                    <div class="desc">
+                      <div class="title">Samsung Galaxy Edge</div>
+                      <small>Lorem ipsum dolor sit amet</small>
+                    </div>
+                    <div class="value">
+                      <div class="small text-muted">Sold this week</div>
+                      <strong>1.224</strong>
+                    </div>
+                    <div class="actions">
+                      <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="icon-screen-smartphone bg-warning"></i>
+                    <div class="desc">
+                      <div class="title">iPhone 6S</div>
+                      <small>Lorem ipsum dolor sit amet</small>
+                    </div>
+                    <div class="value">
+                      <div class="small text-muted">Sold this week</div>
+                      <strong>1.163</strong>
+                    </div>
+                    <div class="actions">
+                      <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="icon-user bg-danger"></i>
+                    <div class="desc">
+                      <div class="title">Premium accounts</div>
+                      <small>Lorem ipsum dolor sit amet</small>
+                    </div>
+                    <div class="value">
+                      <div class="small text-muted">Sold this week</div>
+                      <strong>928</strong>
+                    </div>
+                    <div class="actions">
+                      <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="icon-social-spotify bg-success"></i>
+                    <div class="desc">
+                      <div class="title">Spotify Subscriptions</div>
+                      <small>Lorem ipsum dolor sit amet</small>
+                    </div>
+                    <div class="value">
+                      <div class="small text-muted">Sold this week</div>
+                      <strong>893</strong>
+                    </div>
+                    <div class="actions">
+                      <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="icon-cloud-download bg-danger"></i>
+                    <div class="desc">
+                      <div class="title">Ebook</div>
+                      <small>Lorem ipsum dolor sit amet</small>
+                    </div>
+                    <div class="value">
+                      <div class="small text-muted">Downloads</div>
+                      <strong>121.924</strong>
+                    </div>
+                    <div class="actions">
+                      <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="icon-camera bg-warning"></i>
+                    <div class="desc">
+                      <div class="title">Photos</div>
+                      <small>Lorem ipsum dolor sit amet</small>
+                    </div>
+                    <div class="value">
+                      <div class="small text-muted">Uploaded</div>
+                      <strong>12.125</strong>
+                    </div>
+                    <div class="actions">
+                      <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                    </div>
+                  </li>
+                  <li class="divider text-center">
+                    <button type="button" class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="show more"><i class="icon-options"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <!--/.col-->
+            </div>
+            <!--/.row-->
+            <br>
+            <table class="table table-responsive-sm table-hover table-outline mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th class="text-center"><i class="icon-people"></i></th>
+                  <th>User</th>
+                  <th class="text-center">Country</th>
+                  <th>Usage</th>
+                  <th class="text-center">Payment Method</th>
+                  <th>Activity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">
+                    <div class="avatar">
+                      <img src="{{ asset('img/avatars/1.jpg') }}" class="img-avatar" alt="admin@bootstrapmaster.com">
+                      <span class="avatar-status badge-success"></span>
+                    </div>
+                  </td>
+                  <td>
+                    <div>Yiorgos Avraamu</div>
+                    <div class="small text-muted">
+                      <span>New</span> | Registered: Jan 1, 2015
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <img src="{{ asset('img/flags/USA.png') }}" alt="USA" style="height:24px;">
+                  </td>
+                  <td>
+                    <div class="clearfix">
+                      <div class="float-left">
+                        <strong>50%</strong>
+                      </div>
+                      <div class="float-right">
+                        <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                      </div>
+                    </div>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-cc-mastercard" style="font-size:24px"></i>
+                  </td>
+                  <td>
+                    <div class="small text-muted">Last login</div>
+                    <strong>10 sec ago</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div class="avatar">
+                      <img src="{{ asset('img/avatars/2') }}.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                      <span class="avatar-status badge-danger"></span>
+                    </div>
+                  </td>
+                  <td>
+                    <div>Avram Tarasios</div>
+                    <div class="small text-muted">
+
+                      <span>Recurring</span> | Registered: Jan 1, 2015
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <img src="{{ asset('img/flags/Brazil.png') }}" alt="Brazil" style="height:24px;">
+                  </td>
+                  <td>
+                    <div class="clearfix">
+                      <div class="float-left">
+                        <strong>10%</strong>
+                      </div>
+                      <div class="float-right">
+                        <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                      </div>
+                    </div>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-cc-visa" style="font-size:24px"></i>
+                  </td>
+                  <td>
+                    <div class="small text-muted">Last login</div>
+                    <strong>5 minutes ago</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div class="avatar">
+                      <img src="{{ asset('img/avatars/3.jpg') }}" class="img-avatar" alt="admin@bootstrapmaster.com">
+                      <span class="avatar-status badge-warning"></span>
+                    </div>
+                  </td>
+                  <td>
+                    <div>Quintin Ed</div>
+                    <div class="small text-muted">
+                      <span>New</span> | Registered: Jan 1, 2015
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <img src="{{ asset('img/flags/India.png') }}" alt="India" style="height:24px;">
+                  </td>
+                  <td>
+                    <div class="clearfix">
+                      <div class="float-left">
+                        <strong>74%</strong>
+                      </div>
+                      <div class="float-right">
+                        <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                      </div>
+                    </div>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 74%" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-cc-stripe" style="font-size:24px"></i>
+                  </td>
+                  <td>
+                    <div class="small text-muted">Last login</div>
+                    <strong>1 hour ago</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div class="avatar">
+                      <img src="{{ asset('img/avatars/4.jpg') }}" class="img-avatar" alt="admin@bootstrapmaster.com">
+                      <span class="avatar-status badge-secondary"></span>
+                    </div>
+                  </td>
+                  <td>
+                    <div>Enéas Kwadwo</div>
+                    <div class="small text-muted">
+                      <span>New</span> | Registered: Jan 1, 2015
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <img src="{{ asset('img/flags/France.png') }}" alt="France" style="height:24px;">
+                  </td>
+                  <td>
+                    <div class="clearfix">
+                      <div class="float-left">
+                        <strong>98%</strong>
+                      </div>
+                      <div class="float-right">
+                        <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                      </div>
+                    </div>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-paypal" style="font-size:24px"></i>
+                  </td>
+                  <td>
+                    <div class="small text-muted">Last login</div>
+                    <strong>Last month</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div class="avatar">
+                      <img src="{{ asset('img/avatars/5.jpg') }}" class="img-avatar" alt="admin@bootstrapmaster.com">
+                      <span class="avatar-status badge-success"></span>
+                    </div>
+                  </td>
+                  <td>
+                    <div>Agapetus Tadeáš</div>
+                    <div class="small text-muted">
+                      <span>New</span> | Registered: Jan 1, 2015
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <img src="{{ asset('img/flags/Spain.png') }}" alt="Spain" style="height:24px;">
+                  </td>
+                  <td>
+                    <div class="clearfix">
+                      <div class="float-left">
+                        <strong>22%</strong>
+                      </div>
+                      <div class="float-right">
+                        <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                      </div>
+                    </div>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 22%" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-google-wallet" style="font-size:24px"></i>
+                  </td>
+                  <td>
+                    <div class="small text-muted">Last login</div>
+                    <strong>Last week</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div class="avatar">
+                      <img src="{{ asset('img/avatars/6.jpg') }}" class="img-avatar" alt="admin@bootstrapmaster.com">
+                      <span class="avatar-status badge-danger"></span>
+                    </div>
+                  </td>
+                  <td>
+                    <div>Friderik Dávid</div>
+                    <div class="small text-muted">
+                      <span>New</span> | Registered: Jan 1, 2015
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <img src="{{ asset('img/flags/Poland.png') }}" alt="Poland" style="height:24px;">
+                  </td>
+                  <td>
+                    <div class="clearfix">
+                      <div class="float-left">
+                        <strong>43%</strong>
+                      </div>
+                      <div class="float-right">
+                        <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                      </div>
+                    </div>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 43%" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-cc-amex" style="font-size:24px"></i>
+                  </td>
+                  <td>
+                    <div class="small text-muted">Last login</div>
+                    <strong>Yesterday</strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!--/.col-->
+    </div>
+    <!--/.row-->
+  </div>
+
+</div>
+@endsection
+<!-- /.conainer-fluid -->
+
+@section('myscript')
+  <script src="{{ asset('js/views/main.js') }}"></script>
 @endsection

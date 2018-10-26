@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use App\Models\Equip;
+use App\Models\Worker;
+use App\Models\Work;
 
 class HomeController extends Controller
 {
@@ -28,6 +31,14 @@ class HomeController extends Controller
     }
 
     public function dashboard(){
-        return view('admin.dashboard');
+        $equipCount = Equip::count();
+        $workerCount = Worker::count();
+        $workmcount = Work::where('status', '!=', '1')->count();
+        $workfcount = Work::where('status', '1')->count();
+        return view('admin.dashboard')
+            ->with('equipct', $equipCount)
+            ->with('workerct', $workerCount)
+            ->with('workmcount', $workmcount)
+            ->with('workfcount', $workfcount);
     }
 }
